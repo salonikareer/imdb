@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated_card{
+    overflow:hidden;
+}
+
+.animated-card::before{
+    position:absolute;
+    background:white;
+    transform:rotate(45deg);
+
+}
+
+.animated_card:hover:before{
+    animation :animate 2s linear infinite;
+
+}
+
+@keyframes animate{
+    from {
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+animated_card::after{
+    position:absolute;
+    insent:5px;
+
+}
